@@ -1,0 +1,164 @@
+html{
+  --white: #fffcf2ff;
+  --green: rgba(179, 255, 160, 0.692);
+  --yellow: rgba(255, 241, 160, 0.692);
+  --purple: rgba(188, 160, 255, 0.692);
+  --black: #252422ff;
+  --backgroundImageSize: 500px;
+}
+.wrapper {
+  min-height: 100vh;
+  /* font-family: "Roboto Slab", serif; */
+  font-weight: 300;
+  color: var(--black);
+  position: relative;
+}
+
+section {
+  height: 100vh;
+  font-size: 40px;
+  font-weight: 100;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+}
+section:nth-child(1) {
+}
+section:nth-child(2) {
+  background: var(--white);
+  background-image: url('../assets/Absurd-Illustrations/PNG/01.png');
+  background-position: right;
+  background-size:var(--backgroundImageSize);
+  background-repeat: no-repeat;
+}
+section:nth-child(3) {
+  background: var(--white);
+  background-image: url('../assets/Absurd-Illustrations/PNG/08.png');
+  background-position: right;
+  background-size:var(--backgroundImageSize);
+  background-repeat: no-repeat;
+}
+section:nth-child(4) {
+  background: var(--white);
+  background-image: url('../assets/Absurd-Illustrations/PNG/13.png');
+  background-position: right;
+  background-size:var(--backgroundImageSize);
+  background-repeat: no-repeat;
+}
+section:nth-child(5) {
+  background: var(--white);
+  background-image: url('../assets/Absurd-Illustrations/PNG/09.png');
+  background-position: right;
+  background-size:var(--backgroundImageSize);
+  background-repeat: no-repeat;
+}
+section:nth-child(6) {
+  background: var(--white);
+  background-image: url('../assets/Absurd-Illustrations/PNG/14.png');
+  background-position: right;
+  background-size:var(--backgroundImageSize);
+  background-repeat: no-repeat;
+}
+section:nth-child(7) {
+  background: var(--white);
+  background-image: url('../assets/Absurd-Illustrations/PNG/02.png');
+  background-position: right;
+  background-size:var(--backgroundImageSize);
+  background-repeat: no-repeat;
+}
+
+.nav__wrapper {
+  position: fixed;
+  height: 100%;
+  padding: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+}
+.nav {
+  margin: 0 0 100px 30px;
+}
+.nav__counter {
+  font-size: 24px;
+  transition: all 0.15s ease-out;
+}
+.nav__title {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0 0 0.25em;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+.nav__body {
+  font-weight: 100;
+  font-size: 18px;
+  font-size: 18px;
+  width: 300px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: height 0.3s ease-out, opacity 0.2s ease-out;
+}
+.nav li {
+  position: relative;
+  transition: all 0.3s ease-out;
+  margin-bottom: 1em;
+}
+.nav li:after {
+  content: "";
+  display: block;
+  border-left: 3px solid var(--black);
+  border-top: 3px solid var(--black);
+  height: 250px;
+  width: 20px;
+  position: absolute;
+  left: -30px;
+  top: 15px;
+}
+.nav li a {
+  display: block;
+  padding: 0;
+  color: var(--black);
+  transition: all 0.15s ease-out;
+}
+.nav li a:hover {
+  background-color: transparent;
+  padding-left: 1em;
+}
+.nav li a:focus {
+  background-color: transparent;
+}
+.nav li.active {
+  pointer-events: none;
+  padding-left: 1em;
+}
+.nav li.active a{
+  background: var(--black);
+  border: 3px solid var(--black);
+  padding: 8px;
+  border-radius: 4px;
+  color: var(--white);
+}
+.nav li.active:after {
+  width: 35px;
+  height: 400px;
+  top: 35px;
+}
+.nav li.active .nav__counter {
+  font-size: 48px;
+}
+.nav li.active .nav__title {
+  height: 40px;
+  opacity: 1;
+  overflow: visible;
+}
+.nav li.active .nav__body {
+  height: 100px;
+  opacity: 1;
+  overflow: visible;
+}
