@@ -28,7 +28,6 @@ a{
 }
 p{
   font-size: 1.5rem;
-  text-align: justify;
   line-height: 1.2;
 }
 #header{
@@ -72,10 +71,11 @@ p{
   font-size: 2rem;
   font-weight: bold;
   border-bottom: 3px solid var(--eerie-black);
-  padding: 4px 6px;
   float:left;
   margin-right: 8px;
+  margin-bottom: 8px;
 }
+
 .highlightRight{
   width: 100%;
   height: 40%;
@@ -182,8 +182,10 @@ font-size: 3rem;
   flex-direction: row;
   justify-content: space-between;
 }
+.hideMobile{
+  display: none;
+}
 @media only screen and (min-width: 900px) {
-
   .topTitle {
     z-index: 100;
     margin-top: 100px;
@@ -193,13 +195,20 @@ font-size: 3rem;
   body {
     width: 70%;
   }
+  p{
+    text-align: justify;
+  }
   .topTitle {
     z-index: 100;
     margin-top: 24px;
   }
   #what-we-do{
     margin: auto;
+    margin-top: 72px;
     display: flex;
     flex-direction: row;
+  }
+  .hideMobile{
+    display: block;
   }
 }
