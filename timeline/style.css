@@ -167,6 +167,6 @@ section:nth-child(7) {
     --backgroundImageSize: 500px;
   }
   .nav__wrapper{
-    width: 70%;
+    width: 50%;
   }
 }
